@@ -1,0 +1,1 @@
+export { Main_content } from './Main_content';

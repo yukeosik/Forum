@@ -1,0 +1,38 @@
+@use 'variables' as vars;
+
+@font-face {
+    font-family: 'Lato';
+    src: url('../../public/assets/fonts/Lato-Black.woff') format('woff'),
+         url('../../public/assets/fonts/Lato-Black.woff2') format('woff2');
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: 'Albertus';
+    src: url('../../public/assets/fonts/AlbertusNova.woff') format('woff'),
+         url('../../public/assets/fonts/AlbertusNova.woff2') format('woff2');
+}
+
+body {
+    font-family: 'Lato';
+    font-weight: 300;
+    background-color: vars.$color-backgroundMain;
+}
+
+ul > li {
+    list-style: none;
+}
+
+button {
+    font-family: 'Lato';
+    border: none;
+    background-color: transparent;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+p {
+    margin: 0 0 15px;
+}

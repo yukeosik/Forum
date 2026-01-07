@@ -1,0 +1,13 @@
+@use '../../styles/variables.scss' as vars;
+
+main {
+    h1 {
+        font-family: 'Albertus';
+    }
+}
+
+.importantInformation {
+    padding: 20px;
+    border-radius: 25px;
+    background-color: vars.$color-backgroundSections;
+}

@@ -1,0 +1,22 @@
+@use 'variables' as vars;
+
+.error {
+  color: vars.$error;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.error-input {
+  border: 2px solid vars.$error !important;
+}
+
+.general-error {
+  background: #ffebee;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+.field-error {
+  font-size: 12px;
+}
