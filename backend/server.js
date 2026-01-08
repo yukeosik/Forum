@@ -174,7 +174,7 @@ app.use((error, req, res, next) => {
 });
 
 // Запуск сервера
-server.listen(process.env.PORT || 3000, '0.0.0.0', () => {
+server.listen(port, '0.0.0.0', () => {
     console.log(`🚀 HTTP сервер запущен на порту ${port}`);
     console.log(`🔌 WebSocket сервер доступен на ws://localhost:${port}`);
     console.log(`🌐 Express API доступен на http://localhost:${port}`);
