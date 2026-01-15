@@ -1,14 +1,8 @@
 const isDevelopment = process.env.NODE_ENV === 'development';
 
-const SERVEO_URL = 'https://b87bdc3c9d3d92e2-178-64-100-169.serveousercontent.com';
+const API_BASE = 'https://forum-production-cf3e.up.railway.app/api';
 
-const API_BASE = isDevelopment
-  ? 'http://localhost:3000/api'
-  : `${SERVEO_URL}/api`;
-
-const WS_URL = isDevelopment
-  ? 'ws://localhost:3000'
-  : `null`;
+const WS_URL = 'wss://forum-production-cf3e.up.railway.app';
 
 const API_ENDPOINTS = {
   // Аутентификация

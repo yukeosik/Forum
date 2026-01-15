@@ -21,8 +21,7 @@ const allowedOrigins = [
     'http://localhost:3000',
     'https://messenger-9df79.web.app', //поменять на домен firebase
     'https://ваш-проект.firebaseapp.com', //альтернативный firebase
-    'https://*.serveousercontent.com',
-    'https://b87bdc3c9d3d92e2-178-64-100-169.serveousercontent.com',
+    'https://forum-production-cf3e.up.railway.app',
     'https://localhost:8080',  
     'http://localhost',
     // Добавьте сюда ваш ngrok адрес когда получите его:
