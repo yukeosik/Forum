@@ -93,10 +93,6 @@ app.use(express.json({
 
 app.use(express.urlencoded({ extended: true }));
 
-// Статические файлы
-app.use(express.static(publicDir));
-app.use('/assets', express.static(path.join(publicDir, 'assets')));
-
 // Маршруты
 app.use('/api/auth', authRoutes);
 app.use('/api/user', userRoutes);
@@ -151,6 +147,10 @@ app.get('/api/ip', (req, res) => {
     headers: req.headers
   });
 });
+
+// Статические файлы
+app.use(express.static(publicDir));
+app.use('/assets', express.static(path.join(publicDir, 'assets')));
 
 // Обработка 404
 app.use((req, res) => {
