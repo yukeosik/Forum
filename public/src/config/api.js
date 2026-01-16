@@ -1,10 +1,14 @@
 const isDevelopment = process.env.NODE_ENV === 'development';
 
-const API_BASE = 'https://forum-production-cf3e.up.railway.app/api';
+const API_BASE = process.env.REACT_APP_API_BASE_URL || 'https://forum-production-cf3e.up.railway.app/api';
 
-const WS_URL = 'wss://forum-production-cf3e.up.railway.app';
+const WS_URL = process.env.REACT_APP_API_BASE_URL || 'wss://forum-production-cf3e.up.railway.app';
 
 const API_ENDPOINTS = {
+
+  API_BASE: API_BASE,
+  WS_URL: WS_URL,
+
   // Аутентификация
   login: `${API_BASE}/auth/login`,
   register: `${API_BASE}/auth/register`,
@@ -43,6 +47,13 @@ const API_ENDPOINTS = {
   WS_URL: WS_URL,
 
   health: `${API_BASE}/health`
+};
+
+export const getFullUrl = (endpoint, ...params) => {
+  if (typeof endpoint === 'function') {
+    return endpoint(...params);
+  }
+  return endpoint;
 };
 
 export default API_ENDPOINTS;
